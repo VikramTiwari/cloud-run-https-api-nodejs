@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: BODY_LIMIT }));
 app.set(`trust proxy`, true);
 
 app.get(`/_healthz`, (req, res) => {
-	req.status(200).send(req.query);
+	res.status(200).send(req.query);
 });
 
 // api router
